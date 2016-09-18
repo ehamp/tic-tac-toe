@@ -12,6 +12,6 @@ def board():
     return 'hello its me board XXX 000 XXX'
 
 
-@app.route('/test', methods=['POST'])
+@app.route('/test', methods=['GET','POST'])
 def inbound():
     return "hi hi hi"
