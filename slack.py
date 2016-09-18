@@ -10,7 +10,9 @@ def message_game_state():
         for channel in channels['channels']:
             if channel['name'] == 'test':
                 # check conditions, send correct message depending on game state
-                send_message(channel['id'], 'this is a test')
+                send_message(channel['id'], 'Sorry, another tic-tac-toe game '
+											'is '
+											'already in progress!')
 	return None
 
 
@@ -23,23 +25,8 @@ def send_message(channel_id, message):
 		icon_emoji=':unicorn_face:'
 	)
 
-def channel_info(channel_id):
-    channel_info = slack_client.api_call("channels.info", channel=channel_id)
-    if channel_info:
-        return channel_info['channel']
-    return None
-
 
 if __name__=='__main__':
-	#channels=list_channels()
-	#if channels:
-	#	for c in channels:
-	#		if c['name'] == 'test':
-	#			send_message(c['id'], board_state((c['id'])))
-	#			detailed_info = channel_info(c['id'])
-    #        	if detailed_info:
-    #            	print(detailed_info['latest']['text'])
-	#else:
-	print("cant auth")
+	print("yo")
 
 
