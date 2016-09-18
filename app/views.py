@@ -12,7 +12,7 @@ def board():
     return 'hello its me board XXX 000 XXX'
 
 
-@app.route('/slack', methods=['POST'])
+@app.route('/ttt', methods=['POST'])
 def inbound():
     SLACK_WEBHOOK_SECRET = os.environ.get('SLACK_WEBHOOK_SECRET')
     if request.form.get('token') == SLACK_WEBHOOK_SECRET:
