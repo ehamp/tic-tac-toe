@@ -12,6 +12,6 @@ def board():
     return 'hello its me board XXX 000 XXX'
 
 
-@app.route('/ttt', methods=['POST'])
+@app.route('/test', methods=['POST'])
 def inbound():
     return "hi hi hi"
