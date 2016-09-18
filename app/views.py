@@ -1,6 +1,7 @@
 from app import app
 from flask import request, Response
 import os
+import slackclient as slack
 
 @app.route('/', methods=['GET'])
 def index():
@@ -13,5 +14,6 @@ def board():
 
 
 @app.route('/test', methods=['GET','POST'])
-def inbound():
+def create_game():
+    slack.message_game_state()
     return "hi hi hi"
