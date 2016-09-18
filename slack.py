@@ -1,8 +1,7 @@
 import os
 from slackclient import SlackClient
 
-SLACK_TOKEN = 'xoxp-79292694064-79292385942-80693856467-bb0e73200d'
-#os.environ.get('SLACK_TOKEN')
+SLACK_TOKEN = os.environ.get('SLACK_TOKEN')
 slack_client = SlackClient(SLACK_TOKEN) 
 
 def message_game_state():
@@ -11,7 +10,7 @@ def message_game_state():
         for channel in channels['channels']:
             if channel['name'] == 'test':
                 # check conditions, send correct message depending on game state
-                send_message(c['id'], 'this is a test')
+                send_message(channel['id'], 'this is a test')
 	return None
 
 

@@ -1,7 +1,7 @@
 from app import app
 from flask import request, Response
 import os
-import slackclient as slack
+import slack as slack
 
 @app.route('/', methods=['GET'])
 def index():
