@@ -15,7 +15,7 @@ def board():
 
 @app.route('/ttt', methods=['GET','POST'])
 def check_game_state():
-    g = Game.query().all().first()
+    g = Game.query.all().first()
     if g is None or g.is_game_over:
         g = Game('p1', 'p2')
     else:
